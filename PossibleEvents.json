@@ -1,0 +1,24 @@
+[
+    {
+        "Id": 1,
+        "Description": "Vous avez trouvé une mine d'or ! +2 Gold",
+        "Status": "Bonus",
+        "TypeRequested": "Gold",
+        "Modificator":2,
+        "effects":
+        {
+            "TypeRequested": "Gold",
+            "Modificator":2
+        }
+    },
+    {
+        "Id": 2,
+        "Description": "Un batiment s'est écroulé, tuant 2 de vos citoyens",
+        "Status":"Malus",
+        "effects":
+        {
+            "TypeRequested": "numberOfCivilian",
+            "Modificator":-2
+        }
+    }
+]
