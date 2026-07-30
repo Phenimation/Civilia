@@ -231,6 +231,14 @@ void Invest(City city)
         case "5":
         canRun = false;
         break;
+
+        case "destruct":
+        city.currentChoosedEvent = PossiblesEvents[12];
+        break;
+
+        case "creation":
+        city.currentChoosedEvent = PossiblesEvents[14];
+        break;
     }
 }
 
