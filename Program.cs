@@ -14,43 +14,34 @@ List<Evenement> PossiblesEvents = JsonSerializer.Deserialize<List<Evenement>>(js
 
 int maxEvent = PossiblesEvents.Count;
 
-Game();
+bool canRun = true;
 
-void Game()
+Init();
+
+void Init()
 {
     civilisationName = SelectCivilisationName();
     InititFirstCity();
-
-    foreach (City city in Cities)
-    {
-        Console.WriteLine(city.name);
-        Console.WriteLine($"Nombre de citoyens : {city.numberOfCivilian}");
-        Console.WriteLine(city.numberOfScientist);
-        Console.WriteLine(city.numberOfWorker);
+    Game();
+}
+void Game()
+{
+    while(canRun){
+        
+        foreach (City city in Cities)
+        {
+            city.currentEvent = PickRandomEvent();
+            Console.WriteLine(city.currentEvent.Description);
+            ExecuteEvent(city);
+        }
+        DisplayInfos();
+        Console.Write("Voulez vous continuer ?(y/n): ");
+        string response = Console.ReadLine() ?? string.Empty;
+        if (response == "n")
+        {
+            canRun = false;
+        }
     }
-    Console.WriteLine($"Gold actuel : {gold}");
-
-    Console.WriteLine("+------------------+");
-
-
-    foreach (City city in Cities)
-    {
-        city.currentEvent = PickRandomEvent();
-        Console.WriteLine(city.currentEvent.Description);
-        ExecuteEvent(city);
-    }
-
-    Console.WriteLine("+------------------+");
-
-    
-    foreach (City city in Cities)
-    {
-        Console.WriteLine(city.name);
-        Console.WriteLine($"Nombre de citoyens : {city.numberOfCivilian}");
-        Console.WriteLine(city.numberOfScientist);
-        Console.WriteLine(city.numberOfWorker);
-    }
-    Console.WriteLine($"Gold actuel : {gold}");
 }
 
 string SelectCivilisationName()
@@ -92,8 +83,56 @@ void ExecuteEvent(City city)
         levelOfCulture += effect.modificator;
         break;
 
+        case "numberOfScientist":
+        city.numberOfScientist += effect.modificator;
+        break;
+
+        case "numberOfWorker":
+        city.numberOfWorker += effect.modificator;
+        break;
+
+        case "City":
+        if (effect.modificator == -1)
+            {
+                DestroyCity(city);
+                return;
+            }
+        else if (effect.modificator == 1)
+        {
+            CreateNewCity();
+        }   
+        break;
+
         default:
         break;
     }
     }
+}
+
+void CreateNewCity()
+{
+    City newCity = new("Extalia",10,0,0, null);
+    Cities.Add(newCity);
+}
+
+void DestroyCity(City city)
+{
+    Console.WriteLine($"{city.name} s'écroule !");
+    Cities.Remove(city);
+}
+
+void DisplayInfos()
+{
+    Console.WriteLine("+------------------+");
+    foreach (City city in Cities)
+    {
+        Console.WriteLine($"+---------{city.name}--------+");
+        Console.WriteLine($"Nombre de citoyens : {city.numberOfCivilian}");
+        Console.WriteLine($"Nombre de Scientifiques :{city.numberOfScientist}");
+        Console.WriteLine($"Nombre de Workers :{city.numberOfWorker}");
+    }
+    Console.WriteLine($"Gold actuel : {gold}");
+
+    Console.WriteLine("+------------------+");
+
 }

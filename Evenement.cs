@@ -5,7 +5,6 @@ public class Evenement
     public string? Status{get;set;}
 
     public List<Effects>? effects{get;set;}
-
 }
 public class Effects
     {
