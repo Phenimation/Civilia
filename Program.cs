@@ -5,7 +5,7 @@ Random rng = new();
 string civilisationName = "";
 
 int gold =0;
-//float levelOfCulture =0;
+float levelOfCulture =0;
 
 List<City> Cities = new();
 
@@ -76,17 +76,24 @@ Evenement PickRandomEvent()
 
 void ExecuteEvent(City city)
 {
-    switch (city.currentEvent?.effects?.TypeRequested)
+    foreach (Effects effect in city.currentEvent!.effects!){
+
+    switch (effect.typeRequested)
     {
         case "Gold":
-        gold += city.currentEvent.effects.Modificator;
+        gold += effect.modificator;
         break;
         
         case "numberOfCivilian":
-        city.numberOfCivilian += city.currentEvent.effects.Modificator;
+        city.numberOfCivilian += effect.modificator;
+        break;
+
+        case "LevelOfCulture":
+        levelOfCulture += effect.modificator;
         break;
 
         default:
         break;
+    }
     }
 }

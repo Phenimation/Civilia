@@ -1,24 +1,39 @@
 [
-    {
-        "Id": 1,
-        "Description": "Vous avez trouvé une mine d'or ! +2 Gold",
-        "Status": "Bonus",
+  {
+    "Id": 1,
+    "Description": "Vous avez trouvé une mine d'or ! +2 Gold",
+    "Status": "Bonus",
+    "Effects": [
+      {
         "TypeRequested": "Gold",
-        "Modificator":2,
-        "effects":
-        {
-            "TypeRequested": "Gold",
-            "Modificator":2
-        }
-    },
-    {
-        "Id": 2,
-        "Description": "Un batiment s'est écroulé, tuant 2 de vos citoyens",
-        "Status":"Malus",
-        "effects":
-        {
-            "TypeRequested": "numberOfCivilian",
-            "Modificator":-2
-        }
-    }
+        "Modificator": 2
+      }
+    ]
+  },
+  {
+    "Id": 2,
+    "Description": "Un batiment s'est écroulé, tuant 2 de vos citoyens",
+    "Status": "Malus",
+    "Effects": [
+      {
+        "TypeRequested": "numberOfCivilian",
+        "Modificator": -2
+      }
+    ]
+  },
+  {
+    "Id": 3,
+    "Description": "Vos scientifiques ont découvert une nouvelle technologie avec vos financements ! Culture +1 / Gold -2",
+    "Status": "Bonus",
+    "Effects": [
+      {
+        "TypeRequested": "LevelOfCulture",
+        "Modificator": 1
+      },
+      {
+        "TypeRequested": "Gold",
+        "Modificator": -2
+      }
+    ]
+  }
 ]

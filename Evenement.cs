@@ -4,10 +4,12 @@ public class Evenement
     public string? Description{get;set;}
     public string? Status{get;set;}
 
-    public Effects? effects{get;set;}
-    public class Effects
-    {
-        public string? TypeRequested {get;set;}
-        public int Modificator {get;set;}
-    }
+    public List<Effects>? effects{get;set;}
+
 }
+public class Effects
+    {
+        public string? typeRequested{get;set;}
+        public int modificator {get;set;}
+        
+    }
