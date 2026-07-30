@@ -65,8 +65,7 @@
     "Status": "investment",
     "subCategory": "entreprises",
     "effects": [
-      { "typeRequested": "Gold", "modificator": 4 },
-      { "typeRequested": "Gold", "modificator": -2 }
+      { "typeRequested": "Gold", "modificator": 4 }
     ]
   },
   {
@@ -185,8 +184,7 @@
     "Status": "investment",
     "subCategory": "entreprises",
     "effects": [
-      { "typeRequested": "Gold", "modificator": 6 },
-      { "typeRequested": "Gold", "modificator": -3 }
+      { "typeRequested": "Gold", "modificator": 5}
     ]
   },
   {
