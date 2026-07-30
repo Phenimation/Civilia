@@ -4,36 +4,170 @@
     "Description": "Vous avez trouvé une mine d'or ! +2 Gold",
     "Status": "Bonus",
     "effects": [
-      {
-        "typeRequested": "Gold",
-        "modificator": 2
-      }
+      { "typeRequested": "Gold", "modificator": 2 }
     ]
   },
   {
     "Id": 2,
-    "Description": "Un batiment s'est écroulé, tuant 2 de vos citoyens",
+    "Description": "Un bâtiment s'est écroulé, tuant 2 de vos citoyens",
     "Status": "Malus",
     "effects": [
-      {
-        "typeRequested": "numberOfCivilian",
-        "modificator": -2
-      }
+      { "typeRequested": "numberOfCivilian", "modificator": -2 }
     ]
   },
   {
     "Id": 3,
-    "Description": "Vos scientifiques ont découvert une nouvelle technologie avec vos financements ! Culture +1 / Gold -2",
+    "Description": "Vos scientifiques ont découvert une nouvelle technologie : culture +1, gold -2",
     "Status": "Bonus",
     "effects": [
-      {
-        "typeRequested": "LevelOfCulture",
-        "modificator": 1
-      },
-      {
-        "typeRequested": "Gold",
-        "modificator": -2
-      }
+      { "typeRequested": "LevelOfCulture", "modificator": 1 },
+      { "typeRequested": "Gold", "modificator": -2 }
+    ]
+  },
+  {
+    "Id": 4,
+    "Description": "Marché florissant : +5 Gold",
+    "Status": "Bonus",
+    "effects": [
+      { "typeRequested": "Gold", "modificator": 5 }
+    ]
+  },
+  {
+    "Id": 5,
+    "Description": "Épidémie locale : -3 civils",
+    "Status": "Malus",
+    "effects": [
+      { "typeRequested": "numberOfCivilian", "modificator": -3 }
+    ]
+  },
+  {
+    "Id": 6,
+    "Description": "Recrutement massif : +2 travailleurs, -1 scientifique",
+    "Status": "Mix",
+    "effects": [
+      { "typeRequested": "numberOfWorker", "modificator": 2 },
+      { "typeRequested": "numberOfScientist", "modificator": -1 }
+    ]
+  },
+  {
+    "Id": 7,
+    "Description": "Découverte archéologique : +1 culture",
+    "Status": "Bonus",
+    "effects": [
+      { "typeRequested": "LevelOfCulture", "modificator": 1 }
+    ]
+  },
+  {
+    "Id": 8,
+    "Description": "Incendie dans la ville : -1 worker, -1 civil",
+    "Status": "Malus",
+    "effects": [
+      { "typeRequested": "numberOfWorker", "modificator": -1 },
+      { "typeRequested": "numberOfCivilian", "modificator": -1 }
+    ]
+  },
+  {
+    "Id": 9,
+    "Description": "Subvention royale : +3 Gold, +1 scientifique",
+    "Status": "Bonus",
+    "effects": [
+      { "typeRequested": "Gold", "modificator": 3 },
+      { "typeRequested": "numberOfScientist", "modificator": 1 }
+    ]
+  },
+  {
+    "Id": 10,
+    "Description": "Crise économique : -4 Gold",
+    "Status": "Malus",
+    "effects": [
+      { "typeRequested": "Gold", "modificator": -4 }
+    ]
+  },
+  {
+    "Id": 11,
+    "Description": "Peste des cultures : -1 culture, -1 worker",
+    "Status": "Malus",
+    "effects": [
+      { "typeRequested": "LevelOfCulture", "modificator": -1 },
+      { "typeRequested": "numberOfWorker", "modificator": -1 }
+    ]
+  },
+  {
+    "Id": 12,
+    "Description": "Assemblée scientifique : +2 scientifiques",
+    "Status": "Bonus",
+    "effects": [
+      { "typeRequested": "numberOfScientist", "modificator": 2 }
+    ]
+  },
+  {
+    "Id": 13,
+    "Description": "Catastrophe : la ville est détruite",
+    "Status": "Malus",
+    "effects": [
+      { "typeRequested": "City", "modificator": -1 }
+    ]
+  },
+  {
+    "Id": 14,
+    "Description": "Fête nationale : perte d'or mais hausse de culture (+1 culture, -1 gold)",
+    "Status": "Mix",
+    "effects": [
+      { "typeRequested": "LevelOfCulture", "modificator": 1 },
+      { "typeRequested": "Gold", "modificator": -1 }
+    ]
+  },
+  {
+    "Id": 15,
+    "Description": "Colonie fondée : création d'une nouvelle ville",
+    "Status": "Bonus",
+    "effects": [
+      { "typeRequested": "City", "modificator": 1 }
+    ]
+  },
+  {
+    "Id": 16,
+    "Description": "Rébellion locale : -2 civils, -1 worker",
+    "Status": "Malus",
+    "effects": [
+      { "typeRequested": "numberOfCivilian", "modificator": -2 },
+      { "typeRequested": "numberOfWorker", "modificator": -1 }
+    ]
+  },
+  {
+    "Id": 17,
+    "Description": "Marchands itinérants : +2 gold, +1 worker",
+    "Status": "Bonus",
+    "effects": [
+      { "typeRequested": "Gold", "modificator": 2 },
+      { "typeRequested": "numberOfWorker", "modificator": 1 }
+    ]
+  },
+  {
+    "Id": 18,
+    "Description": "Sabotage industriel : -1 scientifique, -3 gold",
+    "Status": "Malus",
+    "effects": [
+      { "typeRequested": "numberOfScientist", "modificator": -1 },
+      { "typeRequested": "Gold", "modificator": -3 }
+    ]
+  },
+  {
+    "Id": 19,
+    "Description": "Programme éducatif : +1 culture, +1 scientifique",
+    "Status": "Bonus",
+    "effects": [
+      { "typeRequested": "LevelOfCulture", "modificator": 1 },
+      { "typeRequested": "numberOfScientist", "modificator": 1 }
+    ]
+  },
+  {
+    "Id": 20,
+    "Description": "Crue soudaine : -2 workers, -1 civilian",
+    "Status": "Malus",
+    "effects": [
+      { "typeRequested": "numberOfWorker", "modificator": -2 },
+      { "typeRequested": "numberOfCivilian", "modificator": -1 }
     ]
   }
 ]

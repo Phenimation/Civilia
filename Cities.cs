@@ -5,6 +5,7 @@ public class City
     public int numberOfWorker {get;set;}
     public int numberOfScientist {get;set;}
     public Evenement? currentEvent {get;set;}
+    public Evenement? currentChoosedEvent {get;set;}
 
     public City(string? name, int civilian, int worker, int scientist, Evenement? currentEvent)
     {

@@ -3,7 +3,7 @@ public class Evenement
     public int Id{get;set;}
     public string? Description{get;set;}
     public string? Status{get;set;}
-
+    public string? subCategory {get;set;}
     public List<Effects>? effects{get;set;}
 }
 public class Effects

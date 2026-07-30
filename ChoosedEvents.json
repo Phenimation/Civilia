@@ -1,0 +1,201 @@
+[
+  {
+    "Id": 1,
+    "Description": "Investissement education : financement d'une école (+2 culture, -2 gold)",
+    "Status": "investment",
+    "subCategory": "education",
+    "effects": [
+      { "typeRequested": "LevelOfCulture", "modificator": 2 },
+      { "typeRequested": "Gold", "modificator": -2 }
+    ]
+  },
+  {
+    "Id": 2,
+    "Description": "Investissement education : bibliothèque publique (+1 culture, +1 scientist)",
+    "Status": "investment",
+    "subCategory": "education",
+    "effects": [
+      { "typeRequested": "LevelOfCulture", "modificator": 1 },
+      { "typeRequested": "numberOfScientist", "modificator": 1 }
+    ]
+  },
+  {
+    "Id": 3,
+    "Description": "Investissement education : programme de bourses (+1 culture, -1 gold)",
+    "Status": "investment",
+    "subCategory": "education",
+    "effects": [
+      { "typeRequested": "LevelOfCulture", "modificator": 1 },
+      { "typeRequested": "Gold", "modificator": -1 }
+    ]
+  },
+  {
+    "Id": 4,
+    "Description": "Investissement immobilier : nouvelle résidence pour civils (+3 civilians, -2 gold)",
+    "Status": "investment",
+    "subCategory": "immobilier",
+    "effects": [
+      { "typeRequested": "numberOfCivilian", "modificator": 3 },
+      { "typeRequested": "Gold", "modificator": -2 }
+    ]
+  },
+  {
+    "Id": 5,
+    "Description": "Investissement immobilier : rénovation de quartiers (+2 civilians, +1 worker)",
+    "Status": "investment",
+    "subCategory": "immobilier",
+    "effects": [
+      { "typeRequested": "numberOfCivilian", "modificator": 2 },
+      { "typeRequested": "numberOfWorker", "modificator": 1 }
+    ]
+  },
+  {
+    "Id": 6,
+    "Description": "Investissement immobilier : espace commercial qui attire des civils (+1 civilian, -1 gold)",
+    "Status": "investment",
+    "subCategory": "immobilier",
+    "effects": [
+      { "typeRequested": "numberOfCivilian", "modificator": 1 },
+      { "typeRequested": "Gold", "modificator": -1 }
+    ]
+  },
+  {
+    "Id": 7,
+    "Description": "Investissement entreprises : ouverture d'une nouvelle entreprise (+4 gold, -2 gold frais)",
+    "Status": "investment",
+    "subCategory": "entreprises",
+    "effects": [
+      { "typeRequested": "Gold", "modificator": 4 },
+      { "typeRequested": "Gold", "modificator": -2 }
+    ]
+  },
+  {
+    "Id": 8,
+    "Description": "Investissement entreprises : partenariat commercial (+3 gold)",
+    "Status": "investment",
+    "subCategory": "entreprises",
+    "effects": [
+      { "typeRequested": "Gold", "modificator": 3 }
+    ]
+  },
+  {
+    "Id": 9,
+    "Description": "Investissement entreprises : innovation industrielle (+5 gold, +1 worker)",
+    "Status": "investment",
+    "subCategory": "entreprises",
+    "effects": [
+      { "typeRequested": "Gold", "modificator": 5 },
+      { "typeRequested": "numberOfWorker", "modificator": 1 }
+    ]
+  },
+  {
+    "Id": 10,
+    "Description": "Recherche : laboratoire d'alchimie (+1 culture, -2 gold)",
+    "Status": "research",
+    "effects": [
+      { "typeRequested": "LevelOfCulture", "modificator": 1 },
+      { "typeRequested": "Gold", "modificator": -2 }
+    ]
+  },
+  {
+    "Id": 11,
+    "Description": "Recherche : projet scientifique (+2 culture)",
+    "Status": "research",
+    "effects": [
+      { "typeRequested": "LevelOfCulture", "modificator": 2 }
+    ]
+  },
+  {
+    "Id": 12,
+    "Description": "Travail : programme d'emploi (+2 workers, -1 gold)",
+    "Status": "work",
+    "effects": [
+      { "typeRequested": "numberOfWorker", "modificator": 2 },
+      { "typeRequested": "Gold", "modificator": -1 }
+    ]
+  },
+  {
+    "Id": 13,
+    "Description": "Travail : chantier municipal (+1 worker, +1 civilian)",
+    "Status": "work",
+    "effects": [
+      { "typeRequested": "numberOfWorker", "modificator": 1 },
+      { "typeRequested": "numberOfCivilian", "modificator": 1 }
+    ]
+  },
+  {
+    "Id": 14,
+    "Description": "Investissement education : campagne culturelle (+2 culture, -1 gold)",
+    "Status": "investment",
+    "subCategory": "education",
+    "effects": [
+      { "typeRequested": "LevelOfCulture", "modificator": 2 },
+      { "typeRequested": "Gold", "modificator": -1 }
+    ]
+  },
+  {
+    "Id": 15,
+    "Description": "Investissement immobilier : construction de logements sociaux (+3 civilians)",
+    "Status": "investment",
+    "subCategory": "immobilier",
+    "effects": [
+      { "typeRequested": "numberOfCivilian", "modificator": 3 }
+    ]
+  },
+  {
+    "Id": 16,
+    "Description": "Investissement entreprises : commerce extérieur (+4 gold)",
+    "Status": "investment",
+    "subCategory": "entreprises",
+    "effects": [
+      { "typeRequested": "Gold", "modificator": 4 }
+    ]
+  },
+  {
+    "Id": 17,
+    "Description": "Recherche : nouvelle technologie de transport (+1 culture, +1 worker)",
+    "Status": "research",
+    "effects": [
+      { "typeRequested": "LevelOfCulture", "modificator": 1 },
+      { "typeRequested": "numberOfWorker", "modificator": 1 }
+    ]
+  },
+  {
+    "Id": 18,
+    "Description": "Travail : cycle de formation interne (-1 gold, +1 scientist)",
+    "Status": "work",
+    "effects": [
+      { "typeRequested": "numberOfScientist", "modificator": 1 },
+      { "typeRequested": "Gold", "modificator": -1 }
+    ]
+  },
+  {
+    "Id": 19,
+    "Description": "Investissement immobilier : construction d'un centre communautaire (+2 civilians, -2 gold)",
+    "Status": "investment",
+    "subCategory": "immobilier",
+    "effects": [
+      { "typeRequested": "numberOfCivilian", "modificator": 2 },
+      { "typeRequested": "Gold", "modificator": -2 }
+    ]
+  },
+  {
+    "Id": 20,
+    "Description": "Investissement entreprises : startup technologique (+6 gold, -3 gold)",
+    "Status": "investment",
+    "subCategory": "entreprises",
+    "effects": [
+      { "typeRequested": "Gold", "modificator": 6 },
+      { "typeRequested": "Gold", "modificator": -3 }
+    ]
+  },
+  {
+    "Id": 21,
+    "Description": "Travail : journée de recrutement local (+2 workers, +1 civilian)",
+    "Status": "work",
+    "effects": [
+      { "typeRequested": "numberOfWorker", "modificator": 2 },
+      { "typeRequested": "numberOfCivilian", "modificator": 1 }
+    ]
+  }
+]
